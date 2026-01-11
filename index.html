@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kritima Mehra - Portfolio</title>
+    <title>Anurodh Keshari - Portfolio</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@
             --primary: #000000;
             --secondary: #666666;
             --accent: #FF5A5F;
-            /* Fueler-ish red/orange */
             --bg-light: #F9FAFB;
             --card-bg: #FFFFFF;
             --border: #E5E7EB;
@@ -62,9 +61,6 @@
         .banner {
             height: 200px;
             background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%);
-            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-            /* Rounded bottom only if full width, but here it's inside container usually or top of page */
-            /* Actually, let's make the banner part of the card design */
             border-radius: var(--radius-lg);
             position: relative;
             margin-bottom: 60px;
@@ -175,70 +171,12 @@
             transform: translateY(-2px);
         }
 
-        /* --- Stats Row --- */
-        .stats-row {
-            display: flex;
-            gap: 30px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .stat-val {
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .stat-label {
-            color: var(--secondary);
-            font-size: 14px;
-        }
-
         /* --- Main Grid --- */
         .main-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            /* 2/3 for projects, 1/3 for sidebar if we want, but screenshot layout is mostly full width projects or single column with filters */
-            /* Actually, visual shows simple column flow. Let's do full width container for projects */
             grid-template-columns: 1fr;
             gap: 40px;
             margin-bottom: 60px;
-        }
-
-        /* --- Navigation Tabs --- */
-        .nav-tabs {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 0;
-        }
-
-        .tab {
-            padding-bottom: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--secondary);
-            border-bottom: 2px solid transparent;
-            margin-bottom: -1px;
-        }
-
-        .tab.active {
-            color: var(--primary);
-            border-bottom: 2px solid var(--accent);
-        }
-
-        .tab-badge {
-            background: #FEE2E2;
-            color: #EF4444;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 12px;
-            margin-left: 6px;
         }
 
         /* --- Projects Grid --- */
@@ -303,7 +241,8 @@
 
         .card-footer {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
+            /* Changed from space-between */
             align-items: center;
             margin-top: 12px;
             font-size: 13px;
@@ -313,10 +252,7 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            color: #F59E0B;
-            font-weight: 600;
-            background: #FFFBEB;
-            padding: 4px 8px;
+            /* Removed colors, they are now inline or not needed */
             border-radius: 6px;
         }
 
@@ -344,6 +280,7 @@
             border-radius: 8px;
             background: #f0f0f0;
             object-fit: cover;
+            flex-shrink: 0;
         }
 
         .position-details h3 {
@@ -427,12 +364,6 @@
             .banner {
                 height: 140px;
             }
-
-            .nav-tabs {
-                overflow-x: auto;
-                white-space: nowrap;
-                padding-bottom: 4px;
-            }
         }
     </style>
 </head>
@@ -443,33 +374,30 @@
         <!-- Profile Header -->
         <header class="profile-header">
             <div class="banner">
-                <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=2000"
+                <img src="https://media.licdn.com/dms/image/v2/D5616AQHoxcjuKjjaXw/profile-displaybackgroundimage-shrink_350_1400/B56ZupY9TLI0AY-/0/1768073451745?e=1769644800&v=beta&t=KD-aIhCtHnVdu07q1bMUpIL7TwKV214-4KbbsuMpt-4"
                     alt="Cover Image">
                 <div class="profile-pic-wrapper">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300"
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQGCdp2EJLrY1g/profile-displayphoto-scale_400_400/B56Zupe5QgIMAg-/0/1768075007548?e=1769644800&v=beta&t=cRWyR5yPQZk_UwArwzSGGc_B9uQjaovRe-XuXE_za7U"
                         alt="Profile Picture" class="profile-pic">
                 </div>
             </div>
 
             <div class="header-content">
                 <div class="name-section">
-                    <h1>Kritima Mehra</h1>
+                    <h1>Anurodh Keshari</h1>
                     <i class="fas fa-check-circle verified-badge"></i>
                     <span class="flag">🇮🇳</span>
                 </div>
 
                 <p class="bio-text">
-                    Digital Marketer | Content Strategist | Helping brands grow their online presence.
-                    Currently crafting stories at <strong>Fueler</strong>.
+                    SEO & WordPress Practitioner 🚀 | 5+ Years Experience 📈 | AI Solutions & Automation 🤖 | Helping
+                    Education & Travel Brands Grow Organically 🎯
                 </p>
 
                 <div class="badges-container">
-                    <span class="badge">Digital Marketing</span>
                     <span class="badge">SEO</span>
-                    <span class="badge">Content Writing</span>
-                    <span class="badge">Social Media</span>
-                    <span class="badge">Analytics</span>
-                    <span class="badge">Copywriting</span>
+                    <span class="badge">WordPress</span>
+                    <span class="badge">Content Marketing</span>
                 </div>
 
                 <div class="socials">
@@ -479,36 +407,18 @@
                     <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
                     <a href="#" class="social-btn"><i class="fas fa-link"></i></a>
                 </div>
-
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <span class="stat-val">12.5k</span>
-                        <span class="stat-label">Views</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-val">2.8k</span>
-                        <span class="stat-label">Followers</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-val">45</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                </div>
+                <!-- Removed Stats Row -->
             </div>
         </header>
 
-        <!-- Navigation Tabs -->
-        <div class="nav-tabs">
-            <div class="tab active">Projects <span class="tab-badge">45</span></div>
-            <div class="tab">Positions</div>
-            <div class="tab">About</div>
-        </div>
+        <!-- Removed Navigation Tabs -->
 
-        <!-- content Grid -->
+        <!-- Content Grid -->
         <div class="main-grid">
 
             <!-- Projects Section -->
             <section id="projects">
+                <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
                     <!-- Project Card 1 -->
                     <article class="project-card">
@@ -519,8 +429,8 @@
                         <div class="card-content">
                             <h3 class="card-title">SEO Strategy Checklist for 2024: A Complete Guide</h3>
                             <div class="card-footer">
-                                <span class="hype-stat"><i class="fas fa-fire"></i> 542</span>
-                                <span class="hype-stat" style="background:transparent; color:#9CA3AF;"><i
+                                <span class="hype-stat"
+                                    style="background:transparent; color:#9CA3AF; padding-left:0;"><i
                                         class="far fa-clock"></i> Jan 2024</span>
                             </div>
                         </div>
@@ -535,8 +445,8 @@
                         <div class="card-content">
                             <h3 class="card-title">Social Media Calendar Template for Startups</h3>
                             <div class="card-footer">
-                                <span class="hype-stat"><i class="fas fa-fire"></i> 320</span>
-                                <span class="hype-stat" style="background:transparent; color:#9CA3AF;"><i
+                                <span class="hype-stat"
+                                    style="background:transparent; color:#9CA3AF; padding-left:0;"><i
                                         class="far fa-clock"></i> Dec 2023</span>
                             </div>
                         </div>
@@ -551,8 +461,8 @@
                         <div class="card-content">
                             <h3 class="card-title">Case Study: Growth Hacking for SaaS (0 to 10k MRR)</h3>
                             <div class="card-footer">
-                                <span class="hype-stat"><i class="fas fa-fire"></i> 890</span>
-                                <span class="hype-stat" style="background:transparent; color:#9CA3AF;"><i
+                                <span class="hype-stat"
+                                    style="background:transparent; color:#9CA3AF; padding-left:0;"><i
                                         class="far fa-clock"></i> Nov 2023</span>
                             </div>
                         </div>
@@ -567,8 +477,8 @@
                         <div class="card-content">
                             <h3 class="card-title">Top 10 AI Marketing Tools You Need to Know in 2025</h3>
                             <div class="card-footer">
-                                <span class="hype-stat"><i class="fas fa-fire"></i> 1.2k</span>
-                                <span class="hype-stat" style="background:transparent; color:#9CA3AF;"><i
+                                <span class="hype-stat"
+                                    style="background:transparent; color:#9CA3AF; padding-left:0;"><i
                                         class="far fa-clock"></i> Oct 2023</span>
                             </div>
                         </div>
@@ -583,8 +493,8 @@
                         <div class="card-content">
                             <h3 class="card-title">Email Marketing Campaign Analysis - Q3 Report</h3>
                             <div class="card-footer">
-                                <span class="hype-stat"><i class="fas fa-fire"></i> 210</span>
-                                <span class="hype-stat" style="background:transparent; color:#9CA3AF;"><i
+                                <span class="hype-stat"
+                                    style="background:transparent; color:#9CA3AF; padding-left:0;"><i
                                         class="far fa-clock"></i> Sep 2023</span>
                             </div>
                         </div>
@@ -599,8 +509,8 @@
                         <div class="card-content">
                             <h3 class="card-title">Brand Identity Design for 'EcoLife' Sustainable Goods</h3>
                             <div class="card-footer">
-                                <span class="hype-stat"><i class="fas fa-fire"></i> 675</span>
-                                <span class="hype-stat" style="background:transparent; color:#9CA3AF;"><i
+                                <span class="hype-stat"
+                                    style="background:transparent; color:#9CA3AF; padding-left:0;"><i
                                         class="far fa-clock"></i> Aug 2023</span>
                             </div>
                         </div>
@@ -611,24 +521,100 @@
             <!-- Positions Section -->
             <section id="positions">
                 <h2 class="section-title">Experience</h2>
+
+                <!-- Role 1 -->
                 <div class="position-card">
-                    <img src="https://ui-avatars.com/api/?name=Fueler&background=random" alt="Company Logo"
+                    <img src="https://ui-avatars.com/api/?name=Nueva+Digital&background=random" alt="Company Logo"
                         class="company-logo">
                     <div class="position-details">
-                        <h3>Senior Digital Marketer</h3>
-                        <p>Fueler · Full-time</p>
-                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Jan 2022 - Present</p>
+                        <h3>Digital Marketing Executive</h3>
+                        <p>Nueva Digital Solutions · Full-time</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Jul 2022 - Present · Agra, On-site</p>
                     </div>
                 </div>
+
+                <!-- Role 2 -->
                 <div class="position-card">
-                    <img src="https://ui-avatars.com/api/?name=Agency&background=random" alt="Company Logo"
+                    <img src="https://ui-avatars.com/api/?name=Technosters&background=random" alt="Company Logo"
                         class="company-logo">
                     <div class="position-details">
-                        <h3>Content Strategist</h3>
-                        <p>Creative Agency NYC · Contract</p>
-                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Jun 2020 - Dec 2021</p>
+                        <h3>Digital Marketing Team Leader</h3>
+                        <p>Technosters Technologies OPC Pvt. Ltd. · Full-time</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Feb 2022 - Jul 2022 · Agra, UP</p>
                     </div>
                 </div>
+
+                <!-- Role 3 -->
+                <div class="position-card">
+                    <img src="https://ui-avatars.com/api/?name=Technosters&background=random" alt="Company Logo"
+                        class="company-logo">
+                    <div class="position-details">
+                        <h3>Digital Marketing Executive</h3>
+                        <p>Technosters Technologies OPC Pvt. Ltd.</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Feb 2021 - Feb 2022</p>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="position-card">
+                    <img src="https://ui-avatars.com/api/?name=Freedial&background=random" alt="Company Logo"
+                        class="company-logo">
+                    <div class="position-details">
+                        <h3>Digital Marketing Manager</h3>
+                        <p>Freedial · Freelance</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Apr 2020 - Dec 2021 · Agra, UP</p>
+                    </div>
+                </div>
+
+                <!-- Role 5 -->
+                <div class="position-card">
+                    <img src="https://ui-avatars.com/api/?name=BeadsnFashion&background=random" alt="Company Logo"
+                        class="company-logo">
+                    <div class="position-details">
+                        <h3>Search Engine Optimization Executive</h3>
+                        <p>BeadsnFashion.com · Full-time</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Oct 2020 - Jan 2021 · Agra, UP</p>
+                        <p style="font-size: 14px; margin-top: 8px; color: #4B5563; line-height: 1.6;">
+                            Working at Beadsnfashion was a truly great experience that allowed me to gain valuable
+                            skills and experience in the e-commerce industry...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Role 6 -->
+                <div class="position-card">
+                    <img src="https://ui-avatars.com/api/?name=BeadsnFashion&background=random" alt="Company Logo"
+                        class="company-logo">
+                    <div class="position-details">
+                        <h3>Search Engine Optimization Executive</h3>
+                        <p>BeadsnFashion.com · Internship</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Jul 2020 - Oct 2020 · Agra, UP</p>
+                    </div>
+                </div>
+
+                <!-- Role 7 -->
+                <div class="position-card">
+                    <img src="https://ui-avatars.com/api/?name=UrbanTract&background=random" alt="Company Logo"
+                        class="company-logo">
+                    <div class="position-details">
+                        <h3>Digital Marketing Executive</h3>
+                        <p>UrbanTract Media & Business · Freelance</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Nov 2019 - Jan 2020 · Greater Agra
+                            Area</p>
+                    </div>
+                </div>
+
+                <!-- Role 8 -->
+                <div class="position-card">
+                    <img src="https://ui-avatars.com/api/?name=Disha&background=random" alt="Company Logo"
+                        class="company-logo">
+                    <div class="position-details">
+                        <h3>Computer Operator</h3>
+                        <p>Disha Associate · Full-time</p>
+                        <p style="font-size: 13px; margin-top: 4px; color: #666;">Feb 2017 - Jul 2017 · Agra, UP</p>
+                    </div>
+                </div>
+
             </section>
 
             <!-- About Section -->
@@ -636,13 +622,11 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-card">
                     <p>
-                        Hey! I'm Kritima, a passionate Digital Marketer with over 4 years of experience in creating
-                        compelling content strategies and managing social media growth. I specialize in SEO, data-driven
-                        marketing, and brand storytelling.
-                        <br><br>
-                        My mission is to help brands find their unique voice and connect with their audience in
-                        meaningful ways. When I'm not analyzing metrics, you can find me reading marketing psychology
-                        books or traveling.
+                        SEO & WordPress Practitioner 🚀 with over 5 Years of Experience 📈. I specialize in providing AI
+                        Solutions & Automation 🤖 and Helping Education & Travel Brands Grow Organically 🎯.
+                        My journey has taken me through various roles in digital marketing, from hands-on SEO execution
+                        to leading teams and freelancing. I'm passionate about data-driven strategies and leveraging
+                        technology to solve marketing challenges.
                     </p>
                 </div>
             </section>
@@ -657,21 +641,6 @@
         </div>
 
     </div>
-
-    <script>
-        // Simple script to handle tab switching (visual only for this single page demo)
-        const tabs = document.querySelectorAll('.tab');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                // In a real app this would filter content or scroll to section
-                // For this one-pager, we keep all sections visible but highlight the tab
-            });
-        });
-    </script>
 </body>
 
 </html>
